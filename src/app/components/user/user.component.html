@@ -5,5 +5,5 @@
   {{user.company.name}}
 
 <!--<a routerLink="/user-details/{{user.id}}">Details</a>-->
-  <a [routerLink]="['user-details', user.id]">Details</a>
+  <button (click)="navigateMe(user)">Details</button>
 </p>
