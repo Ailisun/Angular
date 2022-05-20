@@ -21,7 +21,9 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 const routes:Route[] =[
   {path:'', component:MainLayoutComponent, children:[
       {path: '', redirectTo:'users', pathMatch:'full'},
-      {path:'users', component:UsersComponent, children:[]},
+      {path:'users', component:UsersComponent, children:[
+          {path:'id', component:UserDetailsComponent}
+        ]},
       {path:'posts', component:PostsComponent, children:[]},
       {path:'comments', component:CommentsComponent, children:[]}
     ]
