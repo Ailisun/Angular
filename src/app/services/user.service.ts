@@ -7,17 +7,16 @@ import {urls} from "../constants";
 @Injectable({
   providedIn: 'root'
 })
-
 export class UserService {
 
   constructor(private httpClient: HttpClient) {
   }
 
-  getAll():Observable<IUser[]> {
+  getAll(): Observable<IUser[]> {
     return this.httpClient.get<IUser[]>(urls.users)
   }
 
-  getById(id:string): Observable<IUser>{
+  getById(id: string): Observable<IUser> {
     return this.httpClient.get<IUser>(`${urls.users}/${id}`)
   }
 }

@@ -1,0 +1,9 @@
+.details {
+  border: 2px solid saddlebrown;
+  background-color: #eab150;
+  max-width:300px;
+  max-height:250px;
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
+}

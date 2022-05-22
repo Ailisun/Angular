@@ -8,14 +8,15 @@ import {urls} from "../constants";
   providedIn: 'root'
 })
 export class PostService {
+
   constructor(private httpClient: HttpClient) {
   }
 
-  getAll():Observable<IPost[]> {
+  getAll(): Observable<IPost[]> {
     return this.httpClient.get<IPost[]>(urls.posts)
   }
 
-  getById(id:string): Observable<IPost>{
+  getById(id: string): Observable<IPost> {
     return this.httpClient.get<IPost>(`${urls.posts}/${id}`)
   }
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {Route, RouterModule} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -22,10 +23,14 @@ const routes:Route[] =[
   {path:'', component:MainLayoutComponent, children:[
       {path: '', redirectTo:'users', pathMatch:'full'},
       {path:'users', component:UsersComponent, children:[
-          {path:'id', component:UserDetailsComponent}
+          {path:':id', component:UserDetailsComponent}
         ]},
-      {path:'posts', component:PostsComponent, children:[]},
-      {path:'comments', component:CommentsComponent, children:[]}
+      {path:'posts', component:PostsComponent, children:[
+          {path:':id', component:PostDetailsComponent}
+        ]},
+      {path:'comments', component:CommentsComponent, children:[
+          {path:':id', component: CommentsDetailsComponent}
+        ]}
     ]
   }
 ]
@@ -45,6 +50,7 @@ const routes:Route[] =[
     MainLayoutComponent
   ],
   imports: [
+    RouterTestingModule,
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes)

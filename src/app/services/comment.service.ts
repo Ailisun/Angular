@@ -8,14 +8,15 @@ import {urls} from "../constants";
   providedIn: 'root'
 })
 export class CommentService {
+
   constructor(private httpClient: HttpClient) {
   }
 
-  getAll():Observable<IComment[]> {
+  getAll(): Observable<IComment[]> {
     return this.httpClient.get<IComment[]>(urls.comments)
   }
 
-  getById(id:string): Observable<IComment>{
+  getById(id: number): Observable<IComment> {
     return this.httpClient.get<IComment>(`${urls.comments}/${id}`)
   }
 }
