@@ -10,6 +10,8 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import {AppInterceptor} from "./app.interceptor";
 import {AppRoutingModule} from "./app-routing.module";
+import { MovieDetailsComponent } from './components/movie-details/movie-details/movie-details.component';
+import { PaginationComponent } from './components/pagination/pagination/pagination.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import {AppRoutingModule} from "./app-routing.module";
     HeaderComponent,
     MovieListComponent,
     MovieCardComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    MovieDetailsComponent,
+    PaginationComponent
 
   ],
   imports: [
