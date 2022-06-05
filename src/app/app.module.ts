@@ -12,6 +12,8 @@ import {AppInterceptor} from "./app.interceptor";
 import {AppRoutingModule} from "./app-routing.module";
 import { MovieDetailsComponent } from './components/movie-details/movie-details/movie-details.component';
 import { PaginationComponent } from './components/pagination/pagination/pagination.component';
+import { StarsComponent } from './components/stars/stars.component';
+import {NgxStarRatingModule} from "ngx-star-rating";
 
 
 @NgModule({
@@ -23,13 +25,15 @@ import { PaginationComponent } from './components/pagination/pagination/paginati
     MovieCardComponent,
     MainLayoutComponent,
     MovieDetailsComponent,
-    PaginationComponent
+    PaginationComponent,
+    StarsComponent
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxStarRatingModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
