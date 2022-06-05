@@ -15,6 +15,6 @@ export class MovieService {
   }
 
   getMoviesById(id:number): Observable < IGenreInfo>{
-    return  this.httpClient.get<IGenreInfo>(`${urls.movies}/${id}`)
+    return  this.httpClient.get<IGenreInfo>(`${urls.movie}/${id}`)
   }
 }

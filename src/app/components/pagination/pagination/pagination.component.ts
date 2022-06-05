@@ -42,6 +42,8 @@ export class PaginationComponent implements OnInit {
     }
     this.router.navigate([''], {relativeTo: this.activatedRoute, queryParams: {page: `${this.page}`}}).then()
   }
+
 }
+
 
 

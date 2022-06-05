@@ -9,7 +9,8 @@ const routes:Routes = [{
   path:'', component:MainLayoutComponent, children:[
     {path:'', redirectTo: 'movie', pathMatch:'full'},
     {path:'movie',component:MovieListComponent},
-    {path: 'movie/:id', component: MovieDetailsComponent},
+    {path: 'movie/:id', component: MovieDetailsComponent}
+
   ]
 }]
 

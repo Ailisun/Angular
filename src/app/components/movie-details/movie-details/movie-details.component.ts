@@ -22,12 +22,8 @@ export class MovieDetailsComponent implements OnInit {
         this.movieService.getMoviesById(id).subscribe(value => this.movie = value)
       }
     })
+
   }
 
-  movieGenres():string {
-    let genres: string[] = []
-    this.movie.genres.map(genre =>{ genres.push(genre.name)})
-    return genres.join(',')
-  }
 
 }

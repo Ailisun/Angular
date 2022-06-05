@@ -16,4 +16,5 @@ export class GenreComponent implements OnInit {
     this.genreService.getGenres().subscribe(value => this.genres = value.genres)
   }
 
+
 }
